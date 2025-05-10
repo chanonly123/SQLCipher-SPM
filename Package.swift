@@ -11,14 +11,18 @@ let package = Package(
         .library(
             name: "SQLCipher",
             targets: [
-                "SQLCipher"
+                "SQLCipherC"
             ]
         ),
     ],
     targets: [
-        .package(
-            name: "SQLCipher",
-            path: "SQLCipher.framework.zip"
-        )
+        .target(
+            name: "SQLCipherC",
+            dependencies: ["SQLCipherStatic"]
+        ),
+        .binaryTarget(
+            name: "SQLCipherStatic",
+            path: "SQLCipher.xcframework"
+        ),
     ]
 )
