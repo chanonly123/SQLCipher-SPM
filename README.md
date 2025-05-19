@@ -37,8 +37,9 @@ A Package.swift manifest to expose the framework via SwiftPM
 | -------- | ------------- |
 | iOS      | ✅             |
 | macOS    | ❌             |
-| tvOS     | ❌             |
-| watchOS  | ❌             |
+| tvOS     | ✅             |
+| watchOS  | ✅             |
+| visionOS | ✅             |
 
 ## 🛠 Building the XCFramework (Optional)
 

@@ -1,73 +1,75 @@
-# put this file inside the root directory of the project
+#!/bin/bash
 
-# update the framework name
+pod install &&
+
 frameworkName="SQLCipher"
+buildConfig="Release"
+buildDir="output"
+xcframeworkOutputDir="build"
 
-pod install
+rm -rf "$buildDir" "$xcframeworkOutputDir"
+
+frameworkArgs=""
+
 cd Pods
 
-echo "⬛️ cleaning"
-xcodebuild clean
-rm -rf output
-rm -rf build
+# ✅ Hardcoded list of all Apple platform SDKs
+sdk_list=(
+    "iphoneos"
+    "iphonesimulator"
+    "appletvos"
+    "appletvsimulator"
+    "watchos"
+    "watchsimulator"
+    "xros"
+    "xrsimulator"
+)
 
-# framework version
-echo "⬛️ build for iphonesimulator"
-xcodebuild \
--verbose \
--scheme $frameworkName \
--configuration Release \
--derivedDataPath output \
--sdk iphonesimulator build \
-&&
+# Build the framework for each SDK
+for sdk in "${sdk_list[@]}"; do
+    echo "⬛️ Building for $sdk"
+    
+    xcodebuild \
+        -scheme "$frameworkName" \
+        -configuration "$buildConfig" \
+        -sdk "$sdk" \
+        -derivedDataPath "$buildDir/$sdk" \
+        build > /dev/null
 
-echo "⬛️ build for iphoneos"
-xcodebuild \
--verbose \
--scheme $frameworkName \
--configuration Release \
--derivedDataPath output \
--sdk iphoneos build \
-&&
+    # Skip if build failed
+    if [ $? -ne 0 ]; then
+        echo "❌ Build failed for $sdk. Skipping."
+        continue
+    fi
 
-iphoneosDSYM=`readlink -f "../build/Release-iphoneos/$frameworkName/$frameworkName.framework.dSYM"`
-iphonesimulatorDSYM=`readlink -f "../build/Release-iphonesimulator/$frameworkName/$frameworkName.framework.dSYM"`
+    # `readlink -f "../build/Release-iphoneos/$frameworkName/$frameworkName.framework.dSYM"`
 
-echo ${iphoneosDSYM}
-echo ${iphonesimulatorDSYM}
+    # Locate framework and dSYM
+    sdkOutputPath="../$xcframeworkOutputDir/$buildConfig-$sdk/$frameworkName"
+    frameworkPath=`readlink -f "$sdkOutputPath/$frameworkName.framework"`
+    dsymPath=`readlink -f "$sdkOutputPath/$frameworkName.framework.dSYM"`
 
-echo "⬛️ build xcframework"
-xcodebuild -create-xcframework \
--framework "../build/Release-iphoneos/$frameworkName/$frameworkName.framework" \
--debug-symbols ${iphoneosDSYM} \
--framework "../build/Release-iphonesimulator/$frameworkName/$frameworkName.framework" \
--debug-symbols ${iphonesimulatorDSYM} \
--output "build/$frameworkName.xcframework" \
-&&
+    if [ -d "$frameworkPath" ]; then
+        echo "✅ Found framework at $frameworkPath"
+        frameworkArgs="$frameworkArgs -framework '$frameworkPath'"
+        
+        if [ -d "$dsymPath" ]; then
+            echo "✅ Found dSYM at $dsymPath"
+            frameworkArgs="$frameworkArgs -debug-symbols '$dsymPath'"
+        fi
+    else
+        echo "⚠️ Framework not found for $sdk. Skipping: $frameworkPath"
+    fi
+done
 
-echo "✅✅✅✅✅✅ Success ✅✅✅✅✅✅"
+# Create XCFramework
+outPath="../$frameworkName.xcframework"
+rm -rf "$outPath"
+eval "xcodebuild -create-xcframework $frameworkArgs -output '$outPath'"
 
-# echo "⬛️ build documentation"
-# xcodebuild docbuild \
-# -scheme $frameworkName \
-# -derivedDataPath output \
-# -destination 'platform=iOS Simulator,name=iPhone 13' \
-# &&
-
-# docPath=`find output -type d -name "*.doccarchive"`
-
-# echo "⬛️ building static documentation website"
-# $(xcrun --find docc) process-archive \
-# transform-for-static-hosting $docPath \
-# --output-path "build/doc" \
-# --hosting-base-path "/" \
-# &&
-
-# # output file location
-# echo "⬛️ open output folder"
-# open "build/"
-
-# # generated documents directory, localy viewable, requires `python3`
-# cd "build/doc"
-# open "http://localhost:3000/documentation/$frameworkName/"
-# python3 -m http.server 3000
+# Check if the command succeeded
+if [ $? -ne 0 ]; then
+    echo "❌❌❌❌❌❌ xcodebuild failed ❌❌❌❌❌❌"
+else
+    echo "✅✅✅✅✅✅ Success ✅✅✅✅✅✅"
+fi
