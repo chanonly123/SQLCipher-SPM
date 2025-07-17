@@ -10,11 +10,11 @@
 		</data>
 		<key>Headers/sqlite3.h</key>
 		<data>
-		jwInL5ZOVz8oa6DcRZuhFajjOLI=
+		ba2+WUHJtN7D9/zBGYAipELUWVI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JF/0mdQUo+MtQ1r148GQqUAMfqo=
+		lfYn9wYVclZOG3827xJZ4rOa9Oo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>SQLCipher.bundle/Info.plist</key>
 		<data>
-		GR62LzBQyJEevOrgYMubNiF/bEo=
+		hUm1xB6FjMDc6cIq/PSK/tdK84A=
 		</data>
 		<key>SQLCipher.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -42,7 +42,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Pd0m3L5K1PnNd4KpYJScSBx6APfOrm9i+wqjiL3JwYM=
+			Z3E3uo375m0AHDSWNM5E75vKhgfQGYshjGACMAUViNc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -56,7 +56,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NHVQgdFZcdp9LPI4ZNZRWLFo27dOH6uLjXcrsfEvEpc=
+			R32MQi3OnmyBZirSD798CrL9aKDu6vkBARr27WsJvAs=
 			</data>
 		</dict>
 		<key>SQLCipher.bundle/PrivacyInfo.xcprivacy</key>

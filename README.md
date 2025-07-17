@@ -3,6 +3,8 @@
 A Swift Package Manager-compatible distribution of the SQLCipher library via a precompiled XCFramework.
 This package allows Swift projects to use SQLCipher without relying on CocoaPods.
 
+Official repo: https://github.com/sqlcipher/sqlcipher
+
 ## 📦 Why This Exists
 
 SQLCipher is a widely used extension to SQLite that provides transparent 256-bit AES encryption.
