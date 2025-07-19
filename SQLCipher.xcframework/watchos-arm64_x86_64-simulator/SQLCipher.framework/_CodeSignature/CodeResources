@@ -4,7 +4,7 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/SQLCipher-umbrella.h</key>
+		<key>Headers/SQLCipher-iOS-umbrella.h</key>
 		<data>
 		6cOfYbielLB/dSZ7Ui1MZq6NPzU=
 		</data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		1qA9NVZMf4y2HHIn9lBjV388//c=
+		RzkZNrhC2uew24ytS9Q3V0gQ0AI=
 		</data>
 		<key>SQLCipher.bundle/Info.plist</key>
 		<data>
@@ -31,7 +31,7 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/SQLCipher-umbrella.h</key>
+		<key>Headers/SQLCipher-iOS-umbrella.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
@@ -49,7 +49,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XBlMRxYiTz6+b+eZWZCbSgwZRKcBLEU8GgJk9PJRZFc=
+			dnDGgOuvaqjtehks+pTpXzKY2XSH1fqiH67F67orePc=
 			</data>
 		</dict>
 		<key>SQLCipher.bundle/Info.plist</key>

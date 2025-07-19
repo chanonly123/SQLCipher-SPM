@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/apple/Documents/Github/SQLCipher-SPM/build/Release-iphoneos/SQLCipher/SQLCipher.framework/SQLCipher'
+binary-path:     '/Users/apple/Documents/Github/SQLCipher-SPM/build/Release-iphoneos/SQLCipher-iOS/SQLCipher.framework/SQLCipher'
 relocations:
   - { offset: 0x2B553, size: 0x8, addend: 0x0, symName: _SQLCipherVersionString, symObjAddr: 0x0, symBinAddr: 0xE9510, symSize: 0x0 }
   - { offset: 0x2B587, size: 0x8, addend: 0x0, symName: _SQLCipherVersionNumber, symObjAddr: 0x28, symBinAddr: 0xE9538, symSize: 0x0 }

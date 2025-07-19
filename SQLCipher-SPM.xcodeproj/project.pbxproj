@@ -10,6 +10,10 @@
 		1806509A2E28E0E00018C74E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180650962E28E0E00018C74E /* Assets.xcassets */; };
 		1806509B2E28E0E00018C74E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180650972E28E0E00018C74E /* ContentView.swift */; };
 		1806509C2E28E0E00018C74E /* SQLCipher_SPMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180650982E28E0E00018C74E /* SQLCipher_SPMApp.swift */; };
+		187D2BC72E2BBFAC00D9E4AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180650962E28E0E00018C74E /* Assets.xcassets */; };
+		187D2BC82E2BBFB100D9E4AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180650972E28E0E00018C74E /* ContentView.swift */; };
+		187D2BC92E2BBFB600D9E4AD /* SQLCipher_SPMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180650982E28E0E00018C74E /* SQLCipher_SPMApp.swift */; };
+		6BC4A0BFB6BFE505DEB5D293 /* Pods_SQLCipher_macos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF2D7BF04C108CD8A4F728F /* Pods_SQLCipher_macos.framework */; };
 		E23BA3CCBB902AD427CDF404 /* Pods_SQLCipher_SPM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FDEF3D7B4DBE8E72BB237A /* Pods_SQLCipher_SPM.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,13 +21,26 @@
 		180650962E28E0E00018C74E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180650972E28E0E00018C74E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		180650982E28E0E00018C74E /* SQLCipher_SPMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLCipher_SPMApp.swift; sourceTree = "<group>"; };
+		187D2BB32E2BBF5800D9E4AD /* SQLCipher-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLCipher-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		187D2BC12E2BBF5E00D9E4AD /* SQLCipher_macos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SQLCipher_macos.entitlements; sourceTree = "<group>"; };
 		18A6F8C12E28E05900F746D8 /* SQLCipher-SPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SQLCipher-SPM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF2D7BF04C108CD8A4F728F /* Pods_SQLCipher_macos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLCipher_macos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FDEF3D7B4DBE8E72BB237A /* Pods_SQLCipher_SPM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLCipher_SPM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7396FC800C377CC1BB2CE5 /* Pods-SQLCipher-macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLCipher-macos.release.xcconfig"; path = "Target Support Files/Pods-SQLCipher-macos/Pods-SQLCipher-macos.release.xcconfig"; sourceTree = "<group>"; };
 		CD3062DA733C0487BB390D70 /* Pods-SQLCipher-SPM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLCipher-SPM.release.xcconfig"; path = "Target Support Files/Pods-SQLCipher-SPM/Pods-SQLCipher-SPM.release.xcconfig"; sourceTree = "<group>"; };
 		D37C20DFF4E329D71C0B9EA7 /* Pods-SQLCipher-SPM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLCipher-SPM.debug.xcconfig"; path = "Target Support Files/Pods-SQLCipher-SPM/Pods-SQLCipher-SPM.debug.xcconfig"; sourceTree = "<group>"; };
+		E3B234781ED720F79B6E48D5 /* Pods-SQLCipher-macos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLCipher-macos.debug.xcconfig"; path = "Target Support Files/Pods-SQLCipher-macos/Pods-SQLCipher-macos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		187D2BB02E2BBF5800D9E4AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC4A0BFB6BFE505DEB5D293 /* Pods_SQLCipher_macos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18A6F8BE2E28E05900F746D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +62,19 @@
 			path = "SQLCipher-SPM";
 			sourceTree = "<group>";
 		};
+		187D2BC32E2BBF5E00D9E4AD /* SQLCipher-macos */ = {
+			isa = PBXGroup;
+			children = (
+				187D2BC12E2BBF5E00D9E4AD /* SQLCipher_macos.entitlements */,
+			);
+			path = "SQLCipher-macos";
+			sourceTree = "<group>";
+		};
 		18A6F8B82E28E05900F746D8 = {
 			isa = PBXGroup;
 			children = (
 				180650992E28E0E00018C74E /* SQLCipher-SPM */,
+				187D2BC32E2BBF5E00D9E4AD /* SQLCipher-macos */,
 				18A6F8C22E28E05900F746D8 /* Products */,
 				EBC3D5A68D18FC951A506F91 /* Pods */,
 				93C63E437FF9FA00A466C3BF /* Frameworks */,
@@ -59,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				18A6F8C12E28E05900F746D8 /* SQLCipher-SPM.app */,
+				187D2BB32E2BBF5800D9E4AD /* SQLCipher-macos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				36FDEF3D7B4DBE8E72BB237A /* Pods_SQLCipher_SPM.framework */,
+				2CF2D7BF04C108CD8A4F728F /* Pods_SQLCipher_macos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +104,8 @@
 			children = (
 				D37C20DFF4E329D71C0B9EA7 /* Pods-SQLCipher-SPM.debug.xcconfig */,
 				CD3062DA733C0487BB390D70 /* Pods-SQLCipher-SPM.release.xcconfig */,
+				E3B234781ED720F79B6E48D5 /* Pods-SQLCipher-macos.debug.xcconfig */,
+				3A7396FC800C377CC1BB2CE5 /* Pods-SQLCipher-macos.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -83,6 +113,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		187D2BB22E2BBF5800D9E4AD /* SQLCipher-macos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187D2BBE2E2BBF5900D9E4AD /* Build configuration list for PBXNativeTarget "SQLCipher-macos" */;
+			buildPhases = (
+				016A8131726E3C5A62B818BE /* [CP] Check Pods Manifest.lock */,
+				187D2BAF2E2BBF5800D9E4AD /* Sources */,
+				187D2BB02E2BBF5800D9E4AD /* Frameworks */,
+				187D2BB12E2BBF5800D9E4AD /* Resources */,
+				7E2981EC1EB96B1EA696F149 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SQLCipher-macos";
+			productName = "SQLCipher-macos";
+			productReference = 187D2BB32E2BBF5800D9E4AD /* SQLCipher-macos.app */;
+			productType = "com.apple.product-type.application";
+		};
 		18A6F8C02E28E05900F746D8 /* SQLCipher-SPM */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18A6F8CC2E28E05A00F746D8 /* Build configuration list for PBXNativeTarget "SQLCipher-SPM" */;
@@ -112,6 +161,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					187D2BB22E2BBF5800D9E4AD = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					18A6F8C02E28E05900F746D8 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -132,11 +184,20 @@
 			projectRoot = "";
 			targets = (
 				18A6F8C02E28E05900F746D8 /* SQLCipher-SPM */,
+				187D2BB22E2BBF5800D9E4AD /* SQLCipher-macos */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		187D2BB12E2BBF5800D9E4AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187D2BC72E2BBFAC00D9E4AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18A6F8BF2E28E05900F746D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +209,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		016A8131726E3C5A62B818BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SQLCipher-macos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		47C0FC3ACDBD007BD9E721F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,9 +270,35 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SQLCipher-SPM/Pods-SQLCipher-SPM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7E2981EC1EB96B1EA696F149 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLCipher-macos/Pods-SQLCipher-macos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SQLCipher-macos/Pods-SQLCipher-macos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SQLCipher-macos/Pods-SQLCipher-macos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		187D2BAF2E2BBF5800D9E4AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187D2BC92E2BBFB600D9E4AD /* SQLCipher_SPMApp.swift in Sources */,
+				187D2BC82E2BBFB100D9E4AD /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18A6F8BD2E28E05900F746D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +311,66 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		187D2BBC2E2BBF5900D9E4AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3B234781ED720F79B6E48D5 /* Pods-SQLCipher-macos.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SQLCipher-macos/SQLCipher_macos.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WW76S3NRC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chanonly123.SQLCipher-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		187D2BBD2E2BBF5900D9E4AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A7396FC800C377CC1BB2CE5 /* Pods-SQLCipher-macos.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "SQLCipher-macos/SQLCipher_macos.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WW76S3NRC;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chanonly123.SQLCipher-macos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		18A6F8CA2E28E05A00F746D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -240,7 +409,7 @@
 				DEVELOPMENT_TEAM = RP7W82UC8V;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -304,7 +473,7 @@
 				DEVELOPMENT_TEAM = RP7W82UC8V;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -384,6 +553,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		187D2BBE2E2BBF5900D9E4AD /* Build configuration list for PBXNativeTarget "SQLCipher-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187D2BBC2E2BBF5900D9E4AD /* Debug */,
+				187D2BBD2E2BBF5900D9E4AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18A6F8BC2E28E05900F746D8 /* Build configuration list for PBXProject "SQLCipher-SPM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

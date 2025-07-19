@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SQLCipher-SPM",
     platforms: [
-        .iOS(.v12), .watchOS(.v4), .tvOS(.v12), .visionOS(.v1)
+        .macOS(.v10_13), .iOS(.v12), .watchOS(.v4), .tvOS(.v12), .visionOS(.v1)
     ],
     products: [
         .library(

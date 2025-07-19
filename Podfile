@@ -9,3 +9,12 @@ target 'SQLCipher-SPM' do
   pod 'SQLCipher'
 
 end
+
+target 'SQLCipher-macos' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SQLCipher-SPM
+  pod 'SQLCipher'
+
+end

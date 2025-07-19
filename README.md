@@ -38,7 +38,7 @@ A Package.swift manifest to expose the framework via SwiftPM
 | Platform | Supported     |
 | -------- | ------------- |
 | iOS      | ✅             |
-| macOS    | ❌             |
+| macOS    | ✅             |
 | tvOS     | ✅             |
 | watchOS  | ✅             |
 | visionOS | ✅             |
